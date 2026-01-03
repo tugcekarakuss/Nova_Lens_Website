@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Lens</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- meta tags -->
+    <meta
+      name="description"
+      content="Nova Lens is a frontend practice project built with HTML, CSS, and JavaScript. The project focuses on responsive layout, spacing systems, and clean CSS architecture."
+    />
+    <meta
+      name="keywords"
+      content="frontend practice, html css javascript, responsive layout, css spacing system, landing page"
+    />
+    <meta name="author" content="Tugce Karakus" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nova Lens | Frontend Practice Project" />
+    <meta
+      property="og:description"
+      content="A design-inspired landing page focusing on responsive layout, spacing systems, and clean frontend structure."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/project-preview.png" />
+    <meta property="og:url" content="https://your-live-site-url.com" />
+
+    <!-- Twitter -->
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Nova Lens | Frontend Practice Project"
+    />
+    <meta
+      name="twitter:description"
+      content="Design-inspired frontend practice project built with HTML, CSS, and JavaScript. Focused on responsive layout and clean CSS architecture."
+    />
+    <meta name="twitter:image" content="./img/project-preview.png" />
+    <meta name="twitter:creator" content="@Tuvcirella" />
+    <!-- fonts -->
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,800;1,14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,700;1,75..100,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/2a98d6275d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" as="image" href="img/HERO.png">
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__brand-group">
+          <img src="img/logo.png" alt="Nova Lens logo" class="nav__logo-main" />
+          <div class="nav__header">
+            <img src="img/Logo-2.svg" alt="Nova Lens wordmark" class="nav__logo" />
+            <h1 class="nav__title font-inter">CREATING THE FUTURE OF VISION</h1>
+          </div>
+
+          <ul class="nav__menu font-roboto">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Products</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Events</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Press</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__actions">
+          <button class="nav__cart font-roboto">Cart (0)</button>
+          <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </button>
+        </div>
+      </nav>
+
+      <div class="header__content font-roboto-mono reveal">
+        <div class="header__info">
+          <i class="fa-regular fa-copyright fa-2xl" aria-hidden="true"></i>
+          <div class="header__description">
+            <p>
+              Make your smart glasses an extension of your personal style.
+              Choose from a range of elegant lenses and frames.
+            </p>
+            <p>Customize features to suit your preferences.</p>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Scroll Down</span>
+          <i class="fa-solid fa-arrow-down fa-xl" aria-hidden="true"></i>
+        </div>
+      </div>
+    </header>
+    <!-- about -->
+    <section class="about">
+      <div class="about__info reveal">
+        <p class="about__label font-roboto-mono">About</p>
+        <h2 class="about__hero font-inter">
+          Personalize your smart glasses for a unique experience.
+        </h2>
+        <div class="about__content font-roboto-mono">
+          <p>
+            Make your smart glasses an extension of your personal style. Choose
+            from a range of elegant lenses and frames.
+          </p>
+          <p>Customize features to suit your preferences.</p>
+        </div>
+      </div>
+
+      <div class="product-slider">
+        <div class="product-slider__controls">
+          <button class="product-slider__btn" id="prev" onclick="moveSlider('prev')" aria-label="Previous product">
+            <i class="fa-solid fa-arrow-left fa-2xl"></i>
+          </button>
+          <button class="product-slider__btn" id="next" onclick="moveSlider('next')" aria-label="Next product">
+            <i class="fa-solid fa-arrow-right fa-2xl"></i>
+          </button>
+        </div>
+        <div class="product-list">
+          <div class="product-card">
+            <img src="img/Glasses-1.png" alt="Sync2 x-m Intelligent Glasses" />
+            <div class="product-card__info">
+              <span class="product-card__tag font-roboto"
+                >Intelligent glasses
+              </span>
+              <div class="product-card__about font-roboto">
+                <span class="product-card__id">Sync2 x-m</span>
+                <span class="product-card__price">$324 USD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="img/Glasses-2.png" alt="MC80 FT-6 Intelligent Glasses" />
+            <div class="product-card__info">
+              <span class="product-card__tag font-roboto"
+                >Intelligent glasses
+              </span>
+              <div class="product-card__about font-roboto">
+                <span class="product-card__id">MC80 FT-6</span>
+                <span class="product-card__price">$488 USD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="img/Glasses-3.png" alt="Nexus 43-M Intelligent Glasses" />
+            <div class="product-card__info">
+              <span class="product-card__tag font-roboto"
+                >Intelligent glasses
+              </span>
+              <div class="product-card__about font-roboto">
+                <span class="product-card__id">Nexus 43-M</span>
+                <span class="product-card__price">$520 USD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__header">
+        <div class="brand font-roboto">
+          <img src="img/logo.png" alt="Nova Lens logo" />
+          <p>Join the community</p>
+        </div>
+        <p class="footer__heading font-inter reveal">
+          Explore the world with style and connectivity and discover the future
+          today
+        </p>
+      </div>
+      <div class="footer__links">
+        <div class="newsletter">
+          <h3 class="font-roboto">Join The NEWSLETTER</h3>
+          <form action="#" method="POST" class="newsletter__form font-roboto">
+            <div class="form-group">
+              <label class="label" for="newsletter-name">Name</label>
+              <input
+                class="font-roboto-mono input"
+                type="text"
+                id="newsletter-name"
+                placeholder="Your Name Here"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="label" for="newsletter-email">Email</label>
+              <input
+                class="font-roboto-mono input"
+                type="email"
+                id="newsletter-email"
+                placeholder="Your Email Here"
+                required
+              />
+            </div>
+            <button type="submit" class="btn-submit font-roboto-mono">
+              Subscribe
+            </button>
+          </form>
+        </div>
+        <nav class="social-links">
+          <h3 class="font-roboto">Social Links</h3>
+          <ul class="social-links__list font-roboto-mono">
+            <li class="social-links__item">
+              <a href="#" class="social-links__link"
+                ><span>Instagram</span>
+                <i
+                  class="fa-solid fa-arrow-right fa-rotate-by"
+                  style="--fa-rotate-angle: -40deg"
+                ></i
+              ></a>
+            </li>
+            <li class="social-links__item">
+              <a href="#" class="social-links__link"
+                ><span>Twitter</span>
+                <i
+                  class="fa-solid fa-arrow-right fa-rotate-by"
+                  style="--fa-rotate-angle: -40deg"
+                ></i
+              ></a>
+            </li>
+            <li class="social-links__item">
+              <a href="#" class="social-links__link"
+                ><span>Email</span>
+                <i
+                  class="fa-solid fa-arrow-right fa-rotate-by"
+                  style="--fa-rotate-angle: -40deg"
+                ></i
+              ></a>
+            </li>
+            <li class="social-links__item">
+              <a href="#" class="social-links__link"
+                ><span>Medium</span>
+                <i
+                  class="fa-solid fa-arrow-right fa-rotate-by"
+                  style="--fa-rotate-angle: -40deg"
+                ></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
